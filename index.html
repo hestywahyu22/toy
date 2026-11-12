@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Baju Sederhana</title>
+  <!-- Menghubungkan ke file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Bagian Header / Navigasi -->
+  <header>
+    <h1>TokoBaju.id</h1>
+    <button class="btn-keranjang" onclick="bukaTutupKeranjang()">
+      Keranjang (<span id="jumlah-item">0</span>)
+    </button>
+  </header>
+
+  <!-- Banner Utama -->
+  <section class="banner">
+    <h2>Koleksi Baju Terbaru</h2>
+    <p>Bahan adem, nyaman dipakai sehari-hari, harga ramah di kantong.</p>
+  </section>
+
+  <!-- Daftar Produk Baju (Diisi otomatis oleh JavaScript) -->
+  <main class="container">
+    <h3>Katalog Produk</h3>
+    <div id="daftar-produk" class="grid-produk"></div>
+  </main>
+
+  <!-- Tampilan Keranjang Belanja (Popup) -->
+  <div id="modal-keranjang" class="modal">
+    <div class="modal-konten">
+      <div class="modal-header">
+        <h3>Keranjang Belanja</h3>
+        <button class="btn-tutup" onclick="bukaTutupKeranjang()">X</button>
+      </div>
+      
+      <div id="isi-keranjang">
+        <p>Keranjang masih kosong.</p>
+      </div>
+
+      <div class="modal-footer">
+        <p class="total-teks">Total: <strong id="total-harga">Rp 0</strong></p>
+        <button class="btn-checkout" onclick="checkout()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menghubungkan ke file JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
